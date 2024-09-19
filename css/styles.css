@@ -54,8 +54,7 @@ gap: 40px;
 
 a {
 text-decoration: none;
-position:relative;
-color:#404bbf
+
 }
 
 /*------------------------------logo*/
@@ -93,6 +92,8 @@ letter-spacing: 0.02em;
 color: #2e2f42;
 text-transform: none;
 text-decoration: none;
+position: relative;
+color:#404bbf;
 display: block;
 padding: 24px 0;
 transition: color 250ms cubic-bezier(0.4,0,0.2,1);
@@ -390,6 +391,7 @@ border-radius: 50%;
 background-color: #4d5ae5;
 align-items: center;
 justify-content: center;
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -457,9 +459,7 @@ overflow: hidden;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px; 
   position: absolute;
   top: 0;
   height: 100%;
@@ -511,6 +511,7 @@ text-align: left;
 .footer-container {
 display: flex;
 align-items: baseline;
+margin-right: 120px 
 }
 
 .footer-logo-container {
@@ -574,7 +575,7 @@ gap: 16px;
 .footer-icon-list {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+  
 }
 
 .footer-icon-link {
@@ -585,6 +586,7 @@ gap: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .footer-icon-link:hover {
