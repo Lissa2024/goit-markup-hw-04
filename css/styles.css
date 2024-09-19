@@ -19,7 +19,7 @@ img {
 display: block;
 }
 
-/*header*/
+/*----------------------------header*/
 
 .container {
 max-width: 1158px;
@@ -40,7 +40,8 @@ align-items: center;
 
 .page-header {
 border-bottom: 1px solid #e7e9fc;
-
+box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .ul-header-list {
@@ -55,7 +56,7 @@ a {
 text-decoration: none;
 }
 
-/*logo*/
+/*------------------------------logo*/
 
 .logo {
 font-family: "Raleway", sans-serif;
@@ -79,7 +80,7 @@ padding: 24px 0;
 margin-right: 76px;
 }
 
-/*header-list*/
+/*-------------------------header-list*/
 
 .header-list {
 font-family: "Roboto", sans-serif;
@@ -92,6 +93,20 @@ text-transform: none;
 text-decoration: none;
 display: block;
 padding: 24px 0;
+}
+
+.header-list.line::after {
+border-radius: 2px;
+width: 48px;
+height: 4px;
+background: #404bbf;
+content: '';
+display: block;
+width: 100%;
+height: 4px;
+width: 48px;
+position: absolute;
+margin-top: 22px;
 }
 
 .header-list:hover {
@@ -113,7 +128,7 @@ ul,ol {
 list-style-type: none;
 } 
 
-/*adress*/
+/*---------------------------adress*/
 
 .adress {
 font-style: normal;
@@ -154,14 +169,23 @@ color: #404bbf;
 }
 
 
-/*title*/
+/*---------------------------title*/
 
 
 .header-title {
 background-color: #2e2f42;
 width: auto;
 padding: 188px 0;
+background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ), url('../images/people-office1.jpg');
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+
 }
+
 
 .title {
 
@@ -172,7 +196,7 @@ line-height: 107%;
 letter-spacing: 0.02em;
 text-align: center;
 color: #fff;
-background: #2e2f42;
+background: none;
 max-width: 496px;
 display: block;
 margin-left: auto;
@@ -180,7 +204,7 @@ margin-right: auto;
 margin-bottom: 48px;
 }
 
-/*btn*/
+/*-------------------------------btn*/
 
 
 .button {
@@ -218,7 +242,7 @@ letter-spacing: 0.02em;
 background: #404bbf;
 }
 
-/*assets*/
+/*--------------------------assets*/
 
 .assets-section {
 padding-top: 120px;
@@ -248,6 +272,16 @@ width: calc((100% - 72px) / 4);
 
 }
 
+.container-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 264px;
+height: 112px;
+border: 1px solid #8e8f99;
+border-radius: 4px;
+background: #f4f4fd;
+}
 
 .assets-title {
 font-family: "Roboto", sans-serif;
@@ -268,7 +302,7 @@ letter-spacing: 0.02em;
 color: #434455;
 }
 
-/*team*/
+/*----------------------------------team*/
 
 .team {
 background-color: #f4f4fd;
@@ -328,7 +362,28 @@ text-align: center;
 color: #434455;
 }
 
-/*portfolio*/
+.icons-list {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+gap: 24px;
+
+}
+
+.icons-link {
+border-radius: 50%;
+display: flex;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background-color: #4d5ae5;
+align-items: center;
+justify-content: center;
+
+}
+
+/*------------------------------------portfolio*/
 
 .section-portfolio {
 padding: 120px 0 120px 0;
@@ -357,7 +412,36 @@ gap: 48px 24px;
 
 .portfolio-list-item {
 width: calc((100% - 48px) / 3);
+position:relative;
 }
+
+.portfolio-overlay {
+position: absolute;
+width: 360px;
+height: 300px;
+top: 0;
+left: 0;
+background: #4d5ae5;
+cursor: pointer;
+
+}
+
+.paragraph-overlay {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  transform: translateY(100%);
+}
+.portfolio-overlay:hover .paragraph-overlay {
+transform: translateY(0);
+}
+
 
 .portfolio-text-container {
 padding: 32px 16px;
@@ -385,7 +469,7 @@ letter-spacing: 0.02em;
 color: #434455;
 }
 
-/*footer*/
+/*------------------------------------footer*/
 
 .footer-box {
 background-color: #2e2f42;
@@ -422,4 +506,22 @@ letter-spacing: 0.02em;
 color: #f4f4fd;
 max-width: 264px;
 
+}
+
+
+.footer-social {
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+margin-bottom: 16px;
+}
+
+.footer-list {
+display: flex;
+align-items: center;
+justify-content: start;
+gap: 16px;
 }
